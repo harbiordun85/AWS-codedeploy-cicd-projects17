@@ -1,4 +1,4 @@
-# 🚀 my-project17-pipeline
+# 🚀 my-project17-cicd-pipeline
 
 ## End-to-End CI/CD Pipeline with GitHub, S3, CodeBuild, CodeDeploy & CodePipeline
 
