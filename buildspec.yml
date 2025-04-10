@@ -1,6 +1,6 @@
 version: 0.2
 
-phases: 
+phases:
   install:
     runtime-versions:
       nodejs: 16
@@ -8,14 +8,18 @@ phases:
       - echo "installing something"
 
   pre_build:
-    commands: 
+    commands:
       - echo "we are in the pre build phase"
 
   build:
     commands:
       - echo "we are in the build block"
       - echo "we will run some tests"
-      - echo "<h1>Congratulations</h1>" > index.html  # ✅ this creates the file
+      - echo "<h1>Congratulations</h1>" > index.html
+      - echo "File list:"
+      - ls -l
+      - echo "File content:"
+      - cat index.html
       - grep -Fq "Congratulations" index.html
 
   post_build:
@@ -25,6 +29,7 @@ phases:
 artifacts:
   files:
     - '**/*'
+
 
 
             
